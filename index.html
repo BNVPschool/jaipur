@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/style-starter.css">
 </head>
 
-<body>
+<body oncontextmenu="return false;">
     <!-- header -->
     <header id="site-header" class="fixed-top">
         <div class="container">
@@ -39,6 +39,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Schoolgallery.html">School Gallery</a>
+                        </li>
+			    <li class="nav-item">
+                            <a class="nav-link" href="courses.html">Courses</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -202,7 +205,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc14.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html">Princess Group Dance </a>
+                                <a href="Schoolgallery.html">Princess Group Dance </a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +215,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc12.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-2">Janmasthmi Celebration</a>
+                                <a href="Schoolgallery.html" class="sec-2">Janmasthmi Celebration</a>
                             </div>
                         </div>
                     </div>
@@ -222,7 +225,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc11.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-3">Fancy Dress Competition</a>
+                                <a href="Schoolgallery.html" class="sec-3">Fancy Dress Competition</a>
                             </div>
                         </div>
                     </div>
@@ -234,7 +237,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc10.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html">Rangoli Competition </a>
+                                <a href="Schoolgallery.html">Rangoli Competition </a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +247,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc9.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-2">Morning Refreshments</a>
+                                <a href="Schoolgallery.html" class="sec-2">Morning Refreshments</a>
                             </div>
                         </div>
                     </div>
@@ -254,7 +257,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc8.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-3">Independence Day Celebrations</a>
+                                <a href="Schoolgallery.html" class="sec-3">Independence Day Celebrations</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +269,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc7.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html">Little Champ Classrooms </a>
+                                <a href="Schoolgallery.html">Little Champ Classrooms </a>
                             </div>
                         </div>
                     </div>
@@ -276,7 +279,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc6.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-2">Well Equipped Digital Computer Lab</a>
+                                <a href="Schoolgallery.html" class="sec-2">Well Equipped Digital Computer Lab</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +289,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc5.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-3">World Class Teaching Experience With Projector And Surveillance Cameras</a>
+                                <a href="Schoolgallery.html" class="sec-3">World Class Teaching Experience With Projector And Surveillance Cameras</a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +301,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc1.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html">Modern Benches </a>
+                                <a href="Schoolgallery.html">Modern Benches </a>
                             </div>
                         </div>
                     </div>
@@ -308,7 +311,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc2.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-2">Multi Purpose Play Ground</a>
+                                <a href="Schoolgallery.html" class="sec-2">Multi Purpose Play Ground</a>
                             </div>
                         </div>
                     </div>
@@ -318,7 +321,7 @@
                         <div class="grids5-info position-relative">
                             <img src="assets/images/sc3.png" alt="" class="img-fluid" />
                             <div class="meta-list">
-                                <a href="courses.html" class="sec-3">Our Champs Creativity</a>
+                                <a href="Schoolgallery.html" class="sec-3">Our Champs Creativity</a>
                             </div>
                         </div>
                     </div>
@@ -666,6 +669,34 @@
         });
     </script>
     <!-- //disable body scroll which navbar is in active -->
+	<script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+</script>
 
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>

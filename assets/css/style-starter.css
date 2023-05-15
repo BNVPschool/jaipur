@@ -21094,5 +21094,30 @@ h4.inner-text-title {
     line-height: 25px;
   }
 }
+.website-counter {
+  background-color: #eee;
+  height: 30px;
+  width: 100px;
+  color: blue;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  bottom: 2%;
+  text-align: center;
+  right:4%;
+  position:fixed;
+  z-index: 0;
+}
+
+/* Styles for reset button */
+#reset {
+  margin-top: 20px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 20px;
+  color: white;
+  border: 0;
+}
 
 /* //team block */

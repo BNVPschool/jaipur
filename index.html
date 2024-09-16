@@ -89,7 +89,6 @@ Confettiful.prototype._renderConfetti = function() {
 };
 
 window.confettiful = new Confettiful(document.querySelector('.js-container'));
-
 </script>
 	
 	<script type="application/ld+json">
@@ -223,7 +222,14 @@ window.confettiful = new Confettiful(document.querySelector('.js-container'));
   
   100% { transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); }
 }
-
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  border:1px solid white;
+  display:fixed;
+  top:0px;
+}
 .confetti-container {
   perspective: 700px;
   position: absolute;
@@ -252,32 +258,7 @@ window.confettiful = new Confettiful(document.querySelector('.js-container'));
     animation: confetti-fast 1.25s linear 1 forwards;
   }
 }
-		.modal-body { 
-  h1 { 
-    font-weight:900; 
-    font-size:2.3em;
-    text-transform:uppercase;
-  }
-  
-  a.pre-order-btn { 
-    color:#000;
-    background-color:gold;
-    border-radius:1em;
-    padding:1em;
-    display: block;
-    margin: 2em auto;
-    width:50%;
-    font-size:1.25em;
-    font-weight:6600;
-    &:hover { 
-    background-color:#000;
-      text-decoration:none;
-      color:gold;
-    }
-  }
-  
-  
-}
+		
 
 	</style>
 </head>
@@ -368,7 +349,7 @@ window.confettiful = new Confettiful(document.querySelector('.js-container'));
            <h4 class="modal-title">Congratulations on clearing <b>"NEET 2024"</b></h4> 
       </div>
       <div class="modal-body text-center">
-        <img src="assets/images/Nikhil.png" alt="Nikhil Kumar Jajoriya" style="margin-left:50%;width:200px;height:200px;"/>
+        <img src="assets/images/Nikhil.png" alt="Nikhil Kumar Jajoriya" style="width:200px;height:200px;"/>
         <p>Dear Nikhil Kumar,</p>
 		<p>
 		On behalf of the entire B.N.V.P Senior Secondary School, I would like to extend my heartfelt congratulations to you for your outstanding achievement in clearing the NEET 2024 exam! 🎉✨</p>

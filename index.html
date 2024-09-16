@@ -151,116 +151,7 @@
   }
 ]
 </script>
-	<script type="text/javascript">
-		const Confettiful = function (el) {
-  this.el = el;
-  this.containerEl = null;
-
-  this.confettiFrequency = 3;
-  this.confettiColors = ["#EF2964", "#00C09D", "#2D87B0", "#48485E", "#EFFF1D"];
-  this.confettiAnimations = ["slow", "medium", "fast"];
-
-  this._setupElements();
-  this._renderConfetti();
-};
-
-Confettiful.prototype._setupElements = function () {
-  const containerEl = document.createElement("div");
-  const elPosition = this.el.style.position;
-
-  if (elPosition !== "relative" || elPosition !== "absolute") {
-    this.el.style.position = "relative";
-  }
-
-  containerEl.classList.add("confetti-container");
-
-  this.el.appendChild(containerEl);
-
-  this.containerEl = containerEl;
-};
-
-Confettiful.prototype._renderConfetti = function () {
-  this.confettiInterval = setInterval(() => {
-    const confettiEl = document.createElement("div");
-    const confettiSize = Math.floor(Math.random() * 3) + 7 + "px";
-    const confettiBackground = this.confettiColors[
-      Math.floor(Math.random() * this.confettiColors.length)
-    ];
-    const confettiLeft = Math.floor(Math.random() * this.el.offsetWidth) + "px";
-    const confettiAnimation = this.confettiAnimations[
-      Math.floor(Math.random() * this.confettiAnimations.length)
-    ];
-
-    confettiEl.classList.add(
-      "confetti",
-      "confetti--animation-" + confettiAnimation
-    );
-    confettiEl.style.left = confettiLeft;
-    confettiEl.style.width = confettiSize;
-    confettiEl.style.height = confettiSize;
-    confettiEl.style.backgroundColor = confettiBackground;
-
-    confettiEl.removeTimeout = setTimeout(function () {
-      confettiEl.parentNode.removeChild(confettiEl);
-    }, 3000);
-
-    this.containerEl.appendChild(confettiEl);
-  }, 25);
-};
-
-window.confettiful = new Confettiful(document.querySelector(".js-container"));
-
-		
-	</script>
-	<style>
-		@keyframes confetti-slow {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  
-  100% { transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg); }
-}
-
-@keyframes confetti-medium {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  
-  100% { transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg); }
-}
-
-@keyframes confetti-fast {
-  0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
-  
-  100% { transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); }
-}
-
-.confetti-container {
-  perspective: 700px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.confetti {
-  position: absolute;
-  z-index: 1;
-  top: -10px;
-  border-radius: 0%;
-
-  &--animation-slow {
-    animation: confetti-slow 2.25s linear 1 forwards;
-  }
-  
-  &--animation-medium {
-    animation: confetti-medium 1.75s linear 1 forwards;
-  }
-  
-  &--animation-fast {
-    animation: confetti-fast 1.25s linear 1 forwards;
-  }
-}
-
-	</style>
+	
 	</head>
 
 <body oncontextmenu="return false;">
@@ -341,9 +232,9 @@ window.confettiful = new Confettiful(document.querySelector(".js-container"));
 <!-- //Modal popup for congratulations 	-->
 
 	<div id="myModal" class="modal fade" role="dialog" style="overflow:auto;">
-  <div class="modal-dialog js-container">
+  <div class="modal-dialog">
     <!-- Modal content-->
-    <div class="modal-content" style="width: 900px;height: 780px;border-radius: 10px;margin-left: -25%;">
+    <div class="modal-content" style="width: 900px;height: 800px;border-radius: 10px;margin-left: -25%;">
       <div class="modal-header" style="background-color:#07318c">
        <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
         <h4 class="modal-title" style="font-size:18px;color:#fff;">Congratulations on clearing <b>"NEET 2024"</b></h4>
@@ -351,7 +242,7 @@ window.confettiful = new Confettiful(document.querySelector(".js-container"));
 	   <div class="modal-body" style="height:550px;overflow-y:auto;overflow-x:hidden;">
         <img src="assets/images/Nikhil.png" alt="Nikhil Kumar Jajoriya" style="width: 200px;height: 200px;border-radius: 50%;margin-left: 38%;box-shadow: 4px 11px 11px 6px #d5d4d4;"/>
         <p style="margin-top:20px">Dear Nikhil Kumar,</p>
-		<p>
+		<p style="margin-top:15px>
 		On behalf of the entire B.N.V.P Senior Secondary School, I would like to extend my heartfelt congratulations to you for your outstanding achievement in clearing the NEET 2024 exam! 🎉✨</p>
 		
 		<p>Your success is a reflection of your dedication, hard work, and perseverance throughout your academic journey. As a student of the PCB stream in Class 12, you have demonstrated excellence in your studies, and this accomplishment marks the beginning of a bright and promising career in the medical field.

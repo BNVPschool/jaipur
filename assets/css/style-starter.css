@@ -19420,11 +19420,9 @@ p.banner-sub {
 
 .sub-banner-image img {
   position: absolute;
-/*   top: -162px;
-  right: 0px; */
       top: 0px;
     right: 0px;
-    border-radius: 30% 1% 28% 72% / 59% 51% 49% 41%;
+    border-radius: 13% 13% 37% 76% / 65% 52% 87% 49%;
 }
 
 .banner-style-1 {
